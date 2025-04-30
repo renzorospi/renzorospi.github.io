@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viaje a territorios más que posibles - Renzo Rospigliosi Bustamante</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .project-description {
+      max-width: 800px;
+      margin: 4rem auto 2rem auto;
+      padding: 0 1rem;
+      text-align: center;
+      color: #ccc;
+    }
+
+    .project-description h2 {
+      font-size: 2rem;
+      color: #fff;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .project-description .intro {
+      font-size: 1rem;
+      color: #fff;
+      margin-bottom: 2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .image-grid img {
+      width: 100%;
+      height: auto;
+      cursor: pointer;
+      transition: opacity 0.3s;
+    }
+
+    .image-grid img:hover {
+      opacity: 0.9;
+    }
+
+    .lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+    }
+
+    .lightbox .controls {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 90%;
+      margin-top: 1rem;
+      font-size: 2rem;
+      color: #fff;
+      user-select: none;
+      cursor: pointer;
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #000;
+      color: #fff;
+      padding: 10px 15px;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 1.5rem;
+      text-align: center;
+      z-index: 1001;
+      transition: background 0.3s;
+    }
+
+    .back-to-top:hover {
+      background: #333;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.8rem;
+      color: #666;
+      background-color: #000;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="top-nav">
+          <div class="nav-left">
+            <a href="/index.html" class="active">Portafolio</a>
+            <a href="codigo.html">Código</a>
+            <a href="musica.html">Música</a>
+            <a href="contacto.html">Contacto / Sobre mí</a>
+
+          </div>
+          <div class="nav-right">
+            <a href="https://www.instagram.com/renzorospi" target="_blank">Instagram</a>
+            <a href="https://www.youtube.com/@RenzoRospigliosi" target="_blank">YouTube</a>
+            <a href="mailto:renzorospigliosib@gmail.com">Email</a>
+          </div>
+        </div>
+      
+        <div class="name-block">
+          <h1>RENZO ROSPIGLIOSI BUSTAMANTE</h1>
+        </div>
+      </header>
+
+<main>
+  <section class="project-description">
+    <h2>Viaje a territorios más que posibles</h2>
+    <p class="intro">Comisión de la Amazon Conservation Team en conjunto con la Universidad de los Andes para la Corte Constitucional de Colombia</p>
+    <p>Fotos de Mateo Medina</p>
+  </section>
+
+  <section class="image-grid" id="image-grid">
+    <!-- Las imágenes se generarán automáticamente -->
+  </section>
+
+  <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+    <img id="lightbox-img" src="">
+    <div class="controls">
+      <span onclick="prevImage(event)">&#8592;</span>
+      <span onclick="nextImage(event)">&#8594;</span>
+    </div>
+  </div>
+</main>
+
+<a href="#top" class="back-to-top">↑</a>
+
+<footer>
+    © 2025 Renzo Rospigliosi Bustamante. Totalmente copyleft, copia y roba todo el código que quieras.
+  </footer>
+
+<script>
+function generateImagesArray(basePath, baseName, totalImages, extension = 'jpg') {
+  const images = [];
+  for (let i = 1; i <= totalImages; i++) {
+    images.push(`${basePath}/${baseName}${i}.${extension}`);
+  }
+  return images;
+}
+
+let images = generateImagesArray("../img/act", "act", 44);
+let currentIndex = 0;
+
+const grid = document.getElementById('image-grid');
+images.forEach((src, index) => {
+  const img = document.createElement('img');
+  img.src = src;
+  img.alt = `Imagen ACT ${index + 1}`;
+  img.onclick = () => openLightbox(index);
+  grid.appendChild(img);
+});
+
+function openLightbox(index) {
+  currentIndex = index;
+  document.getElementById('lightbox-img').src = images[currentIndex];
+  document.getElementById('lightbox').style.display = 'flex';
+}
+
+function closeLightbox(event) {
+  if (event.target.id === 'lightbox' || event.target.tagName === 'IMG') {
+    document.getElementById('lightbox').style.display = 'none';
+  }
+}
+
+function nextImage(event) {
+  event.stopPropagation();
+  currentIndex = (currentIndex + 1) % images.length;
+  document.getElementById('lightbox-img').src = images[currentIndex];
+}
+
+function prevImage(event) {
+  event.stopPropagation();
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  document.getElementById('lightbox-img').src = images[currentIndex];
+}
+</script>
+
+</body>
+</html>

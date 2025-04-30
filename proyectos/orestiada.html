@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orestiada - Renzo Rospigliosi Bustamante</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .project-description {
+      max-width: 800px;
+      margin: 4rem auto 2rem auto;
+      padding: 0 1rem;
+      text-align: center;
+      color: #ccc;
+    }
+
+    .project-description h2 {
+      font-size: 2rem;
+      color: #fff;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .project-description .intro {
+      font-size: 1rem;
+      color: #fff;
+      margin-bottom: 2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .image-grid img {
+      width: 100%;
+      height: auto;
+      cursor: pointer;
+      transition: opacity 0.3s;
+    }
+
+    .image-grid img:hover {
+      opacity: 0.9;
+    }
+
+    .lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+    }
+
+    .lightbox .controls {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 90%;
+      margin-top: 1rem;
+      font-size: 2rem;
+      color: #fff;
+      user-select: none;
+      cursor: pointer;
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #000;
+      color: #fff;
+      padding: 10px 15px;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 1.5rem;
+      text-align: center;
+      z-index: 1001;
+      transition: background 0.3s;
+    }
+
+    .back-to-top:hover {
+      background: #333;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.8rem;
+      color: #666;
+      background-color: #000;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="top-nav">
+          <div class="nav-left">
+            <a href="/index.html" class="active">Portafolio</a>
+            <a href="codigo.html">Código</a>
+            <a href="musica.html">Música</a>
+            <a href="contacto.html">Contacto / Sobre mí</a>
+
+          </div>
+          <div class="nav-right">
+            <a href="https://www.instagram.com/renzorospi" target="_blank">Instagram</a>
+            <a href="https://www.youtube.com/@RenzoRospigliosi" target="_blank">YouTube</a>
+            <a href="mailto:renzorospigliosib@gmail.com">Email</a>
+          </div>
+        </div>
+      
+        <div class="name-block">
+          <h1>RENZO ROSPIGLIOSI BUSTAMANTE</h1>
+        </div>
+      </header>
+
+<main>
+  <section class="project-description">
+    <h2>Orestiada, de Robert Icke</h2>
+    <p class="intro">Dirigida por pedro Salazar, Videoperformance en vivo</p>
+    <p>
+        https://cambiocolombia.com/cultura/orestiada-un-drama-clasico-que-nos-habla-los-colombianos
+        Una versión contemporánea del drama clásico de Esquilo llega a la Casa del Teatro Nacional. El montaje combina tecnología en video y la actuación de diez actores, bajo la dirección de Pedro Salazar.
+        Por: Redacción Cambio
+        Esta semana se estrenó en la Casa del Teatro Nacional Orestíada, un drama clásico del teatro griego que escribió Esquilo y que Robert Icke, dramaturgo británico contemporáneo, adaptó para centrar la tragedia de la Casa Argos en la mirada femenina de Clitemnestra. Icke presenta a Orestes no solo como el asesino de su madre y su amante, sino como la conciencia que recompone la sucesión de acciones que han llevado a un final tan funesto, a través de una mirada del trauma, la culpa, el sacrificio, la venganza, la justicia y la desintegración de la familia en medio de la guerra.
+        Esta versión está atravesada por la guerra, tan ligada al contexto colombiano ya que habla de las grandes familias de terratenientes y militares que han manejado sus hilos. La casa de Agamenón es la casa de los grandes generales de un país como Colombia, quienes han sido responsables de una parte de su tragedia.
+        Como señala Nicolás Montero, director artístico del Teatro Nacional, esta adaptación de Orestíada pone sobre el tapete asuntos que atañen a la realidad del país, tales como la justicia, la venganza y las consecuencias de la violencia. En esta actualización Icke destaca el papel que han desempeñado los medios de comunicación en la guerra, que vuelven públicos asuntos de las vidas privadas de las personas y banalizan los temas de interés público. Para ilustrarlo la videógrafa Carmen Gil se vale de dispositivos de video que se proyectan a lo largo de la obra. Renzo Rospigliosi se encarga del video en escena.
+        El montaje lo dirige Pedro Salazar, director de teatro, ópera y teatro musical y en él participan Erik Rodríguez, Camila Valenzuela, Juan Camilo Prada, Natalia Ramírez, Juan Manuel Barona, Martha Millán, Manuela Salazar, Matilde Acevedo, David Suárez y Juan Pablo Gómez. Sus personajes reflexionan de manera accesible a través de monólogos filosóficos y charlas de peluquería, sin que con ello se le dé una mirada superficial a la complejidad de este drama tan sangriento.
+        Salazar se formó como director en la escuela de dirección de la Universidad de Columbia, en Nueva York, la escuela de Teatro de Jacques Lecoq, en París y en la Universidad de Brown, donde obtuvo un título de pregrado. Su trabajo profesional en la ópera comenzó en 2007 en el teatro Alla Scala de Milán, nada menos que como asistente del legendario director francés Patrice Chéreau en una producción de Tristán e Isolda de Richard Wagner bajo la dirección musical de otro gigante, el maestro Daniel Barenboim.
+        A partir de allí ha estado al frente de montajes de El Barbero de Sevilla de Gioachino Rossini (Teatro Mayor, 2019), La Boheme de Giacomo Puccini (Teatro de Bellas Artes, 2012) y Don Pasquale de Gaetano Donizetti (Teatro Jorge Eliécer Gaitán, 2011). En 2022 dirigió la ópera Peter Grimes de Benjamin Britten en el Festival Amazonas de Ópera en Brasil y Las bodas de Fígaro de Mozart para el Teatro Mayor de Bogotá. También ha dirigido diversos montajes de teatro musical.
+        
+        Orestíada
+        Casa del Teatro Nacional
+        Carrera. 20 No.37-54, Bogotá</p>
+  </section>
+
+  <section class="image-grid" id="image-grid">
+    <!-- Las imágenes se generarán automáticamente -->
+  </section>
+
+  <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+    <img id="lightbox-img" src="">
+    <div class="controls">
+      <span onclick="prevImage(event)">&#8592;</span>
+      <span onclick="nextImage(event)">&#8594;</span>
+    </div>
+  </div>
+</main>
+
+<a href="#top" class="back-to-top">↑</a>
+
+<footer>
+    © 2025 Renzo Rospigliosi Bustamante. Totalmente copyleft, copia y roba todo el código que quieras.
+  </footer>
+
+<script>
+function generateImagesArray(basePath, baseName, totalImages, extension = 'jpg') {
+  const images = [];
+  for (let i = 1; i <= totalImages; i++) {
+    images.push(`${basePath}/${baseName}${i}.${extension}`);
+  }
+  return images;
+}
+
+let images = generateImagesArray("../img/orestiada", "orestiada", 2);
+let currentIndex = 0;
+
+const grid = document.getElementById('image-grid');
+images.forEach((src, index) => {
+  const img = document.createElement('img');
+  img.src = src;
+  img.alt = `Imagen Orestiada ${index + 1}`;
+  img.onclick = () => openLightbox(index);
+  grid.appendChild(img);
+});
+
+function openLightbox(index) {
+  currentIndex = index;
+  document.getElementById('lightbox-img').src = images[currentIndex];
+  document.getElementById('lightbox').style.display = 'flex';
+}
+
+function closeLightbox(event) {
+  if (event.target.id === 'lightbox' || event.target.tagName === 'IMG') {
+    document.getElementById('lightbox').style.display = 'none';
+  }
+}
+
+function nextImage(event) {
+  event.stopPropagation();
+  currentIndex = (currentIndex + 1) % images.length;
+  document.getElementById('lightbox-img').src = images[currentIndex];
+}
+
+function prevImage(event) {
+  event.stopPropagation();
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  document.getElementById('lightbox-img').src = images[currentIndex];
+}
+</script>
+
+</body>
+</html>
