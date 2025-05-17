@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prisión Euforia - Renzo Rospigliosi Bustamante</title>
+  <title>Silphium - Renzo Rospigliosi Bustamante</title>
   <link rel="stylesheet" href="../css/styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <link rel="icon" href="/favicon.png" type="image/x-icon">
@@ -38,7 +38,7 @@
 
     .image-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 1.5rem;
       padding: 2rem;
       max-width: 1400px;
@@ -145,17 +145,22 @@
 
 <main>
   <section class="project-description">
-    <h2>Prisión Euforia</h2>
-    <p class="intro">Temporadas en el Rock and Pez (2019) y el Festival Saliendo de la Caja, Centro Cultural de la PUCP (2020)</p>
-    <p> Concepto: Renzo Rospigliosi<br>
-        Dirección: Daniel Flores<br>
-        Música: Favio Rojas<br>
-        Intérpretes: Diana Chávez, Renzo Rospigliosi, Mauricio Sotomayor
-        <br>
-        Eres Especial, en Spotify</p>
-  </section>
+    <h2>Silphium</h2>
+    <p class="intro"></p>
+    <p>la imagen pobre intercambia la resolución por la accesibilidad, decía hito steyerl
 
+     <br> silphium es parte de una investigación que llevo haciendo hace ya algunos años, explorando los dispositivos que se supone deberíamos hace rato haber tirado a la basura, pensar que quizás si solo con plugins/licencias/suscripciones podemos hacer arte entonces no es arte, es capitalismo
+      
+     <br> muy agradecido por seguir difundiendo estos descubrimientos y esta investigación que todavía sigue, la obra es solo lo que va sobrando del proceso 🥰
+      
+     <br> esta vez es un ep grabado en una gameboy dmg de 1989 y disponible hoy en el bandcamp de @bogotana_records y plataformas 🤖 hecho a partir de remezclar archivos .sav, tips y errores de los foros de chiptune 
+     <br>
+     <br> gracias @holafaviorojas por el master!
+     <br>
+     <br> “todo el mundo tiene derecho de hacer y disfrutar la música” -kamada tadashi</p>
+  </section>
   <section class="image-grid" id="image-grid">
+    <iframe style="border: 0; width: 350px; height: 654px;" src="https://bandcamp.com/EmbeddedPlayer/album=1405981631/size=large/bgcol=ffffff/linkcol=7137dc/transparent=true/" seamless><a href="https://bogotana.bandcamp.com/album/silphium">Silphium by Renzo Rospigliosi</a></iframe>
     <!-- Las imágenes se generarán automáticamente -->
   </section>
 
@@ -186,14 +191,14 @@ function generateImagesArray(basePath, baseName, totalImages, extension = 'jpg')
   return images;
 }
 
-let images = generateImagesArray("../img/euforia", "euforia", 27);
+let images = generateImagesArray("../img/silphiumep", "silphiumep", 1);
 let currentIndex = 0;
 
 const grid = document.getElementById('image-grid');
 images.forEach((src, index) => {
   const img = document.createElement('img');
   img.src = src;
-  img.alt = `Imagen Prision Euforia ${index + 1}`;
+  img.alt = `Imagen Silphium EP ${index + 1}`;
   img.onclick = () => openLightbox(index);
   grid.appendChild(img);
 });
