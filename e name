@@ -1,0 +1,409 @@
+[33mcommit 5e58ab2eda03fa2efd99e499602d714ea0c59b44[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: renzorospi <renzorospigliosib@gmail.com>
+Date:   Thu Apr 16 20:36:29 2026 -0500
+
+    versión en pdf1
+
+[33mcommit 67adf6f3deda3d620251135a05f6c3ae37befee4[m
+Merge: 3dd5d92 bcf58e7
+Author: renzorospi <renzorospigliosib@gmail.com>
+Date:   Thu Apr 16 20:34:08 2026 -0500
+
+    Merge branch 'main' of https://github.com/renzorospi/renzorospi.github.io
+
+[33mcommit 3dd5d92adf96bf0bee6cc32d14c884922268c802[m
+Author: renzorospi <renzorospigliosib@gmail.com>
+Date:   Thu Apr 16 20:33:11 2026 -0500
+
+    versión en pdf
+
+[33mcommit bcf58e746c89965b00e3080b3646c4ef13e344e3[m
+Author: Renzo Rospigliosi <104537415+renzorospi@users.noreply.github.com>
+Date:   Wed Apr 15 11:16:11 2026 -0500
+
+    Update index.html
+
+[33mcommit b0d7ed9f07f23df58747ca4bebd03f1ed713bad7[m
+Author: Renzo Rospigliosi <104537415+renzorospi@users.noreply.github.com>
+Date:   Wed Apr 15 11:15:47 2026 -0500
+
+    Add files via upload
+
+[33mcommit e0f5a28eafa6636b1b7b66b814ec56cbadd7ea96[m
+Author: Renzo Rospigliosi <104537415+renzorospi@users.noreply.github.com>
+Date:   Wed Apr 15 11:14:09 2026 -0500
+
+    Update index.html
+
+[33mcommit 47f3fda143597af9aacbcfac477ef436258b8034[m
+Author: Renzo Rospigliosi <104537415+renzorospi@users.noreply.github.com>
+Date:   Wed Apr 15 11:11:48 2026 -0500
+
+    Update index.html
+
+[33mcommit e0884162feaa177ff82ab1562dae8cebc670af96[m
+Author: renzorospi <renzorospigliosib@gmail.com>
+Date:   Sun Apr 12 16:01:50 2026 -0500
+
+    Optimización de imágenes web y corrección de bugs HTML
+    
+    - Comprimidas 255 imágenes (~271 MB ahorrados, reducción promedio 75%)
+    - Corregido path CSS incorrecto en codigo.html y contacto.html (../css → css)
+    - Eliminado backslash extraño en </head> de codigo.html
+    
+    Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>
+
+[33mcommit 6042a37b3ceba126f61ab76bce72927e4799e77e[m
+Author: renzorospi <renzorospigliosib@gmail.com>
+Date:   Sat Feb 7 16:55:20 2026 -0500
+
+    Correccion extensiones Órbitas Sonoras
+
+[33mcommit e311820a6e419e297d4846e10c607b0abea341e3[m
+Author: renzorospi <renzorospigliosib@gmail.com>
+Date:   Sat Feb 7 16:50:34 2026 -0500
+
+    Creación proyecto Órbitas Sonoras
+
+[33mcommit 2c225e7edb4c140abbd7038556d95429d6be7d1b[m
+Author: renzorospi <renzorospigliosib@gmail.com>
+Date:   Fri Dec 5 12:29:36 2025 -0500
+
+    Corrección nombre Cyclos
+
+[33mcommit 57e70bb656eeb70ce5a253704503ad82d0c9d18f[m
+Author: renzorospi <renzorospigliosib@gmail.com>
+Date:   Fri Dec 5 12:26:06 2025 -0500
+
+    Plasma
+
+[33mcommit 6dc4e70fc16a899a86c1243701b31c030c4923dc[m
+Author: renzorospi <renzorospigliosib@gmail.com>
+Date:   Fri Dec 5 12:13:45 2025 -0500
+
+    Actualización del CV
+
+[33mcommit e9c48ddc7110963dac457dd7ba61ca57695104b2[m
+Author: Renzo Rospigliosi <renzorospigliosi@Renzos-MacBook-Pro.local>
+Date:   Tue Oct 7 12:03:37 2025 -0500
+
+    Inteligencia de las flores
+
+[33mcommit b83e45e2c39223ec7d20655336791bfa5f153c4a[m
+Author: Renzo Rospigliosi <renzorospigliosi@Renzos-MacBook-Pro.local>
+Date:   Tue Oct 7 12:02:47 2025 -0500
+
+    Inteligencia de las flores
+
+[33mcommit e71b2c0717b6e44e7ab2c2082a4addbeb8daf4d3[m
+Author: Renzo Rospigliosi <renzorospigliosi@Renzos-MacBook-Pro.local>
+Date:   Fri Sep 19 09:37:56 2025 -0500
+
+    Fotos DAC
+
+[33mcommit 72a9c960ad7b17aa1c1c556fc66f13cad168cd35[m
+Author: Renzo Rospigliosi <renzorospigliosi@Renzos-MacBook-Pro.local>
+Date:   Thu Aug 28 13:44:13 2025 -0500
+
+    Residuos silphium iframes centrados
+
+[33mcommit d4857eb12c4498c50deb1ac3c2353d8f98c282d1[m
+Author: Renzo Rospigliosi <renzorospigliosi@Renzos-MacBook-Pro.local>
+Date:   Thu Aug 28 13:41:39 2025 -0500
+
+    Residuos silphium iframes centrados
+
+[33mcommit bafdf4ff1a6cf1a604a8d86c2c840c56f1eb72a1[m
+Author: Renzo Rospigliosi <renzorospigliosi@Renzos-MacBook-Pro.local>
+Date:   Thu Aug 28 13:38:18 2025 -0500
+
+    Residuos silphium iframes centrados
+
+[33mcommit 79b340b1a8d3e365c72d6951152c136cffda053c[m
+Author: Renzo Rospigliosi <renzorospigliosi@Renzos-MacBook-Pro.local>
+Date:   Thu Aug 28 13:33:15 2025 -0500
+
+    Residuos silphium iframes centrados
+
+[33mcommit 0e3e5a9ed0579e8ee70f2dd1593da34e0dc17248[m
+Author: Renzo Rospigliosi <renzorospigliosi@Renzos-MacBook-Pro.local>
+Date:   Thu Aug 28 13:28:25 2025 -0500
+
+    Residuos silphium iframes
+
+[33mcommit b249b490e0b24ad4ca69bba757195ae97b886fff[m
+Author: Renzo Rospigliosi <renzorospigliosi@Renzos-MacBook-Pro.local>
+Date:   Thu Aug 28 13:23:28 2025 -0500
+
+    Residuos en el index
+
+[33mcommit 78250628e806da45b71ae943aca3583f826b5c51[m
+Author: Renzo Rospigliosi <renzorospigliosi@Renzos-MacBook-Pro.local>
+Date:   Wed Aug 27 15:51:57 2025 -0500
+
+    Residuos
+
+[33mcommit ccb03fe3462d8dcb893996bfbe35a061bc0de48b[m
+Author: Renzo Rospigliosi <renzorospigliosi@192.168.2.242>
+Date:   Sun Jul 27 22:37:43 2025 -0500
+
+    Nuevas Voces 2025
+
+[33mcommit 03dfb351f29bbb50c5f484950119c40310872d0a[m
+Author: Renzo Rospigliosi <renzorospigliosi@192.168.2.242>
+Date:   Sun Jul 27 22:36:38 2025 -0500
+
+    Nuevas Voces 2025
+
+[33mcommit 51b6412ac6a28d4e7694e6eb9124afc4d4c4228f[m
+Author: Renzo Rospigliosi <renzorospigliosi@192.168.2.242>
+Date:   Sun Jul 27 22:28:12 2025 -0500
+
+    Nuevas Voces 2025
+
+[33mcommit b96ee0c4859d95dc8bdfb769e39131286ef795ea[m
+Author: Renzo Rospigliosi <renzorospigliosi@192.168.2.174>
+Date:   Wed Jul 16 08:20:18 2025 -0500
+
+    Los toros se cortan el vientre fotos
+
+[33mcommit f6c920fd2fa15282ff6a930c31650e1e1e650b5c[m
+Author: Renzo Rospigliosi <renzorospigliosi@192.168.2.174>
+Date:   Wed Jul 16 08:16:00 2025 -0500
+
+    Los toros se cortan el vientre
+
+[33mcommit dcf6164c1197a5a77acc1e14f3c69a403243261c[m
+Author: Renzo Rospigliosi <renzorospigliosi@192.168.2.174>
+Date:   Tue Jul 15 21:40:24 2025 -0500
+
+    Proyecto La Cuina
+
+[33mcommit ebc5ea02d3a304cb6a96d69d22a5b92258e6dd43[m
+Author: Renzo Rospigliosi <renzorospigliosi@192.168.2.174>
+Date:   Tue Jul 15 21:09:40 2025 -0500
+
+    Fotos La Cuina
+
+[33mcommit 5d09299e69aefd5d3a27d37a6b25bcf11ddfc6bd[m
+Author: U-DESKTOP-IIA59RQ\USER <renzorospigliosib@gmail.com>
+Date:   Sat May 17 13:58:09 2025 -0500
+
+    EP Silphium
+
+[33mcommit 0b4fac1c298a273672b2a1a48f47c9a2ae5a3045[m
+Author: Renzo Rospigliosi <renzorospigliosib@gmail.com>
+Date:   Fri May 2 21:30:56 2025 -0500
+
+    Corrijo extensiones de imagen a .jpg
+
+[33mcommit acca66cab9d1d9ef829a1dbc9d6d4f1bfc612ee7[m
+Author: Renzo Rospigliosi <104537415+renzorospi@users.noreply.github.com>
+Date:   Fri May 2 21:27:55 2025 -0500
+
+    Delete img directory
+
+[33mcommit 64979cf8dd7bda246ccdefaab1f2a3974a43407c[m
+Author: Renzo Rospigliosi <104537415+renzorospi@users.noreply.github.com>
+Date:   Fri May 2 21:17:16 2025 -0500
+
+    Rename cyclos11.JPG to cyclos11.jpg
+
+[33mcommit ec749555ef2bcab812bdff08402d6602e5d93889[m
+Author: Renzo Rospigliosi <104537415+renzorospi@users.noreply.github.com>
+Date:   Fri May 2 21:16:21 2025 -0500
+
+    Rename cyclos10.JPG to cyclos10.jpg
+
+[33mcommit 3a59721df0cccfbdc6dd7af6159ecf5e84af5768[m
+Author: Renzo Rospigliosi <104537415+renzorospi@users.noreply.github.com>
+Date:   Fri May 2 21:15:46 2025 -0500
+
+    Rename cyclos1.JPG to cyclos1.jpg
+
+[33mcommit 9ba78caadcd5377015fee3c612a5270ee7faab96[m
+Author: Renzo Rospigliosi <renzorospigliosib@gmail.com>
+Date:   Fri May 2 21:14:31 2025 -0500
+
+    foto repetida en silphium
+
+[33mcommit 08858e632a88f7488fd4db366a0c8cec42ac9437[m
+Author: Renzo Rospigliosi <renzorospigliosib@gmail.com>
+Date:   Fri May 2 21:13:03 2025 -0500
+
+    extensiones en minusculas
+
+[33mcommit c69b2372c7a55474e5af2417495f14c19c670c7e[m
+Author: Renzo Rospigliosi <renzorospigliosib@gmail.com>
+Date:   Wed Apr 30 08:12:19 2025 -0500
+
+    CC0 en tamaño más chiquito y color blanco
+
+[33mcommit 9125a81a4c4317513ec4cbdc07f799ba8d591b17[m
+Author: Renzo Rospigliosi <renzorospigliosib@gmail.com>
+Date:   Wed Apr 30 08:06:49 2025 -0500
+
+    CC0 en svg
+
+[33mcommit 037bb028e06e41e2308fef98b2ae6c73d2a7c753[m
+Author: Renzo Rospigliosi <renzorospigliosib@gmail.com>
+Date:   Wed Apr 30 07:58:31 2025 -0500
+
+    Correccion una imagen repetida en Silphium
+
+[33mcommit 63e35e3b4c7519a64611e67f46819fd7a55daf2c[m
+Author: Renzo Rospigliosi <renzorospigliosib@gmail.com>
+Date:   Wed Apr 30 07:57:34 2025 -0500
+
+    Colocar la licencia como CC0 (dominio público)
+
+[33mcommit 503da395caf584f60770df11a7f2ce20db658ad4[m
+Author: Renzo Rospigliosi <renzorospigliosib@gmail.com>
+Date:   Wed Apr 30 07:45:31 2025 -0500
+
+    Iconos en el header
+
+[33mcommit 8ca95f212f0eac372cbde41e67121d2e025b3b5f[m
+Author: Renzo Rospigliosi <renzorospigliosib@gmail.com>
+Date:   Wed Apr 30 07:21:47 2025 -0500
+
+    Detalles del header
+
+[33mcommit 8404863a967ceb8f196b016a0cdc1ced5b0dbded[m
+Author: Renzo Rospigliosi <renzorospigliosib@gmail.com>
+Date:   Tue Apr 29 22:57:05 2025 -0500
+
+    Agrego redirección desde www a dominio principal
+
+[33mcommit ea3569e9020801bb901e9c5ddc9316e87c24dc5f[m
+Author: Renzo Rospigliosi <104537415+renzorospi@users.noreply.github.com>
+Date:   Tue Apr 29 22:32:47 2025 -0500
+
+    Create CNAME
+
+[33mcommit e4e8ebdd1510242756f84b20445f4fe351342bf4[m
+Author: Renzo Rospigliosi <104537415+renzorospi@users.noreply.github.com>
+Date:   Tue Apr 29 22:32:45 2025 -0500
+
+    Delete CNAME
+
+[33mcommit 025873468f096a030937e5f0f039f85cfc33ee1d[m
+Author: Renzo Rospigliosi <104537415+renzorospi@users.noreply.github.com>
+Date:   Tue Apr 29 22:32:19 2025 -0500
+
+    Create CNAME
+
+[33mcommit f80854e01b91f45303b1ed8dc3af84a73dbb4100[m
+Author: Renzo Rospigliosi <renzorospigliosib@gmail.com>
+Date:   Tue Apr 29 22:30:54 2025 -0500
+
+    Corrección Header
+
+[33mcommit 42ddfdbdddb3fdbc80e42f57ed972a46cf5cfdb5[m
+Author: Renzo Rospigliosi <renzorospigliosib@gmail.com>
+Date:   Tue Apr 29 22:28:36 2025 -0500
+
+    Reemplazo completo del sitio web
+
+[33mcommit cf2a8a0c47b115193aa6f8fcc43f1437bca25ef3[m
+Author: Renzo Rospigliosi <104537415+renzorospi@users.noreply.github.com>
+Date:   Sun Apr 28 11:04:18 2024 -0500
+
+    Delete CNAME
+
+[33mcommit a8a8b66ec45a813df30cc504cba3e2ee03e51b37[m
+Author: Renzo Rospigliosi <104537415+renzorospi@users.noreply.github.com>
+Date:   Fri Apr 26 17:00:55 2024 -0500
+
+    Create CNAME
+
+[33mcommit 34371073134a375ca0b815435c78f1253f0bdefa[m
+Author: Renzo Rospigliosi <104537415+renzorospi@users.noreply.github.com>
+Date:   Fri Apr 26 17:00:39 2024 -0500
+
+    Delete CNAME
+
+[33mcommit 4f4935f0204d6b95f56e57daa938e2eba73a5ae4[m
+Author: Renzo Rospigliosi <104537415+renzorospi@users.noreply.github.com>
+Date:   Tue Apr 9 20:36:57 2024 -0500
+
+    Delete casadesanta directory
+
+[33mcommit 5a0b4845fcee67e75954e87a96aa23c8c046bf89[m
+Author: Renzo Rospigliosi <104537415+renzorospi@users.noreply.github.com>
+Date:   Sun Apr 7 12:25:30 2024 -0500
+
+    casa de santa tunel
+
+[33mcommit 67949c50de6fcc5991c2e932d72f7bee6daee33d[m
+Author: Renzo Rospigliosi <104537415+renzorospi@users.noreply.github.com>
+Date:   Sun Apr 7 00:12:30 2024 -0500
+
+    cocina regalo
+
+[33mcommit 10caad93a19feafed774f841a2e3c2af2b3c8639[m
+Author: Renzo Rospigliosi <104537415+renzorospi@users.noreply.github.com>
+Date:   Sun Apr 7 00:07:47 2024 -0500
+
+    detalles cocina
+
+[33mcommit 5e5d6f7c4e0c0a63dc7d0115c77ee85911fb6ca9[m
+Author: Renzo Rospigliosi <104537415+renzorospi@users.noreply.github.com>
+Date:   Sat Apr 6 23:45:15 2024 -0500
+
+    compression disabled
+
+[33mcommit 6ac0435dcb0f2e1f77b71c161979a90ff6787640[m
+Author: Renzo Rospigliosi <104537415+renzorospi@users.noreply.github.com>
+Date:   Sat Apr 6 23:42:37 2024 -0500
+
+    casa de santa boceto brotli
+
+[33mcommit bb1ede4c692f72b5971ee577258222ab0d292c95[m
+Author: Renzo Rospigliosi <104537415+renzorospi@users.noreply.github.com>
+Date:   Sat Apr 6 23:33:49 2024 -0500
+
+    casa de santa boceto 1
+
+[33mcommit 57f96dcdacf2b2f575de05ed79b875fccff8a3db[m
+Author: Renzo Rospigliosi <104537415+renzorospi@users.noreply.github.com>
+Date:   Wed Mar 27 12:44:13 2024 -0500
+
+    menu
+
+[33mcommit d72114e25f9841db7d6607abe67f034f8350281f[m
+Merge: d52e1a4 e85cb53
+Author: Renzo Rospigliosi <104537415+renzorospi@users.noreply.github.com>
+Date:   Wed Mar 27 12:21:51 2024 -0500
+
+    Merge branch 'main' of https://github.com/renzorospi/renzorospi.github.io
+
+[33mcommit d52e1a45df96a06aca45aadcb9b68b5d1545f24e[m
+Author: Renzo Rospigliosi <104537415+renzorospi@users.noreply.github.com>
+Date:   Wed Mar 27 12:21:49 2024 -0500
+
+    actualizacion bio e imagen de presentacion
+
+[33mcommit e85cb539c90bf247bdb998f8b2e4901ae1bb45c1[m
+Author: Renzo Rospigliosi <104537415+renzorospi@users.noreply.github.com>
+Date:   Tue Mar 26 23:58:12 2024 -0500
+
+    Create CNAME
+
+[33mcommit 9e4753f96e2fdbcbc5710008886dda34a50e373a[m
+Author: Renzo Rospigliosi <104537415+renzorospi@users.noreply.github.com>
+Date:   Tue Mar 26 23:57:25 2024 -0500
+
+    Delete CNAME
+
+[33mcommit 7a5e1ed8f72c37959757159c0538f374c470799f[m
+Author: Renzo Rospigliosi <104537415+renzorospi@users.noreply.github.com>
+Date:   Tue Mar 26 23:40:58 2024 -0500
+
+    Create CNAME
+
+[33mcommit 98ab4870798c629430e36e7189aaf490495265fc[m
+Author: Renzo Rospigliosi <104537415+renzorospi@users.noreply.github.com>
+Date:   Tue Mar 26 23:37:00 2024 -0500
+
+    backup upload

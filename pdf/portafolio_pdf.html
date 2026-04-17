@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portafolio — Renzo Rospigliosi Bustamante</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* ==============================
+     RESET & BASE
+  ============================== */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black:   #0a0a0a;
+    --white:   #f5f5f0;
+    --gray:    #aaaaaa;
+    --light:   #d8d8d0;
+    --accent:  #c8b89a;
+    --rule:    rgba(255,255,255,0.12);
+    --page-w:  210mm;
+    --page-h:  297mm;
+    --margin:  18mm;
+  }
+
+  html { font-size: 10pt; }
+
+  body {
+    background: #1a1a1a;
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+  }
+
+  /* ==============================
+     PAGE STRUCTURE
+  ============================== */
+  .page {
+    width: var(--page-w);
+    min-height: var(--page-h);
+    margin: 12mm auto;
+    background: var(--black);
+    padding: var(--margin);
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+  }
+
+  .page:last-of-type { page-break-after: avoid; }
+
+  /* ==============================
+     TYPOGRAPHY
+  ============================== */
+  .bebas { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.04em; }
+
+  h1.name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 52pt;
+    line-height: 0.92;
+    letter-spacing: 0.02em;
+    color: var(--white);
+  }
+
+  h1.name span { color: var(--accent); }
+
+  h2.section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22pt;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    margin-bottom: 6mm;
+  }
+
+  h3.project-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 13pt;
+    letter-spacing: 0.04em;
+    color: var(--white);
+    line-height: 1.1;
+  }
+
+  .year-label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28pt;
+    letter-spacing: 0.06em;
+    color: var(--rule);
+    line-height: 1;
+  }
+
+  p, li { font-size: 9pt; color: var(--light); line-height: 1.65; }
+
+  .small { font-size: 8pt; color: var(--gray); }
+  .accent-text { color: var(--accent); }
+
+  /* ==============================
+     DECORATIVE ELEMENTS
+  ============================== */
+  .rule {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 5mm 0;
+  }
+
+  .rule-accent {
+    border: none;
+    border-top: 1px solid var(--accent);
+    width: 20mm;
+    margin: 3mm 0 5mm 0;
+  }
+
+  .corner-mark {
+    position: absolute;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 7pt;
+    letter-spacing: 0.2em;
+    color: rgba(200,184,154,0.3);
+  }
+
+  .corner-tl { top: 8mm; left: var(--margin); }
+  .corner-tr { top: 8mm; right: var(--margin); text-align: right; }
+  .corner-bl { bottom: 8mm; left: var(--margin); }
+  .corner-br { bottom: 8mm; right: var(--margin); text-align: right; }
+
+  .page-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 8pt;
+    letter-spacing: 0.2em;
+    color: rgba(200,184,154,0.4);
+  }
+
+  /* ==============================
+     PAGE 1 — COVER
+  ============================== */
+  .cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: var(--page-h);
+    padding: var(--margin);
+  }
+
+  .cover-top { }
+
+  .cover-tagline {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 11pt;
+    letter-spacing: 0.3em;
+    color: var(--accent);
+    margin-bottom: 6mm;
+    text-transform: uppercase;
+  }
+
+  .cover-desc {
+    font-size: 9.5pt;
+    color: var(--light);
+    max-width: 130mm;
+    line-height: 1.7;
+    margin-top: 6mm;
+  }
+
+  .cover-image-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5mm;
+    margin: 8mm 0;
+    height: 52mm;
+  }
+
+  .cover-image-strip img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8) saturate(0.65);
+  }
+
+  .cover-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .cover-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5mm;
+  }
+
+  .contact-line {
+    font-size: 8pt;
+    color: var(--gray);
+    letter-spacing: 0.05em;
+  }
+
+  .contact-line strong {
+    color: var(--accent);
+    font-weight: 500;
+    margin-right: 2mm;
+  }
+
+  .cover-year {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48pt;
+    color: rgba(200,184,154,0.12);
+    line-height: 1;
+  }
+
+  .divider-line {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, var(--accent) 0%, transparent 100%);
+    margin: 4mm 0;
+  }
+
+  /* ==============================
+     PAGE 2 — ABOUT + EDUCATION
+  ============================== */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10mm;
+  }
+
+  .about-photo {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    filter: grayscale(30%) brightness(0.9);
+    margin-bottom: 5mm;
+  }
+
+  .about-photo-placeholder {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background: rgba(200,184,154,0.08);
+    border: 1px solid var(--rule);
+    margin-bottom: 5mm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .edu-item {
+    margin-bottom: 5mm;
+    padding-left: 3mm;
+    border-left: 2px solid var(--accent);
+  }
+
+  .edu-degree {
+    font-size: 9pt;
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.3;
+    margin-bottom: 1mm;
+  }
+
+  .edu-institution {
+    font-size: 8pt;
+    color: var(--accent);
+    margin-bottom: 0.5mm;
+  }
+
+  .edu-year {
+    font-size: 7.5pt;
+    color: var(--gray);
+  }
+
+  /* ==============================
+     PAGE 3 — EXPERIENCE
+  ============================== */
+  .experience-col {
+    columns: 2;
+    column-gap: 8mm;
+  }
+
+  .exp-year-group {
+    break-inside: avoid;
+    margin-bottom: 5mm;
+  }
+
+  .exp-year {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 16pt;
+    color: var(--accent);
+    letter-spacing: 0.06em;
+    line-height: 1;
+    margin-bottom: 2mm;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 1mm;
+  }
+
+  .exp-item {
+    margin-bottom: 3mm;
+    break-inside: avoid;
+  }
+
+  .exp-title {
+    font-size: 8.5pt;
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.3;
+  }
+
+  .exp-detail {
+    font-size: 7.5pt;
+    color: var(--gray);
+    line-height: 1.4;
+  }
+
+  /* ==============================
+     PAGE 4 — PROJECTS GRID
+  ============================== */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.5mm;
+  }
+
+  .project-card {
+    break-inside: avoid;
+  }
+
+  .project-img-wrap {
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    background: #111;
+    margin-bottom: 1.5mm;
+  }
+
+  .project-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.85) saturate(0.75);
+    display: block;
+  }
+
+  .project-year {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 7pt;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+  }
+
+  /* ==============================
+     PAGE 5 — MORE PROJECTS + AWARDS
+  ============================== */
+  .awards-section { margin-top: 8mm; }
+
+  .award-item {
+    display: flex;
+    gap: 4mm;
+    margin-bottom: 4mm;
+    break-inside: avoid;
+  }
+
+  .award-icon {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20pt;
+    color: var(--accent);
+    line-height: 1;
+    min-width: 8mm;
+  }
+
+  .award-content { flex: 1; }
+
+  .award-title {
+    font-size: 9pt;
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.3;
+  }
+
+  .award-org {
+    font-size: 7.5pt;
+    color: var(--accent);
+  }
+
+  .award-year-tag {
+    font-size: 7pt;
+    color: var(--gray);
+  }
+
+  /* ==============================
+     SKILLS TAGS
+  ============================== */
+  .tags-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2mm;
+    margin-top: 3mm;
+  }
+
+  .tag {
+    border: 1px solid rgba(200,184,154,0.35);
+    color: var(--accent);
+    font-size: 7pt;
+    padding: 1mm 3mm;
+    letter-spacing: 0.08em;
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* ==============================
+     HYPERLINKS
+  ============================== */
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  a.project-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  a.project-link:hover .project-img-wrap img {
+    filter: brightness(1) saturate(1);
+  }
+
+  a.exp-link {
+    color: var(--white);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(200,184,154,0.25);
+  }
+
+  a.exp-link:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+
+  a.cover-link {
+    color: var(--gray);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(200,184,154,0.2);
+  }
+
+  a.cover-link:hover { color: var(--accent); }
+
+  /* ==============================
+     PRINT STYLES
+  ============================== */
+  @media print {
+    body { background: #0a0a0a; }
+    .page {
+      margin: 0;
+      page-break-after: always;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .page:last-of-type { page-break-after: avoid; }
+  }
+
+  @page {
+    size: A4;
+    margin: 0;
+  }
+</style>
+</head>
+<body>
+
+<!-- ==============================
+     PAGE 1 — COVER
+============================== -->
+<div class="page cover" style="padding: var(--margin);">
+
+  <div class="corner-mark corner-tl">PORTAFOLIO</div>
+  <div class="corner-mark corner-tr">RENZOROSPIGLIOSI.COM</div>
+
+  <div class="cover-top">
+    <div class="cover-tagline">Artista Interdisciplinar &nbsp;·&nbsp; Docente &nbsp;·&nbsp; Bogotá</div>
+    <h1 class="name">RENZO<br><span>ROSPIGLIOSI</span><br>BUSTAMANTE</h1>
+    <div class="divider-line" style="margin-top: 5mm;"></div>
+    <p class="cover-desc">
+      Artista interdisciplinar cuya práctica explora la intersección entre arte, tecnología y performatividad.
+      Construye instalaciones, video experimental, animación expandida y piezas performáticas mediante
+      lógicas computacionales. Director del laboratorio escénico y digital <em>Lirio Blanco</em>.
+    </p>
+  </div>
+
+  <!-- Image strip using real project photos — performers present -->
+  <div class="cover-image-strip">
+    <img src="img/sueño/sueño6.jpg" alt="Sueño con el Cielo y el Mar">
+    <img src="img/toros/toros5.jpg" alt="Los Toros se Cortan el Vientre">
+    <img src="img/euforia/euforia4.jpg" alt="Prisión Euforia">
+    <img src="img/orbitas/orbitas5.JPG" alt="Órbitas Sonoras">
+  </div>
+
+  <div class="cover-bottom">
+    <div class="cover-contact">
+      <div class="contact-line"><strong>Email</strong><a class="cover-link" href="mailto:renzorospigliosib@gmail.com">renzorospigliosib@gmail.com</a></div>
+      <div class="contact-line"><strong>Web</strong><a class="cover-link" href="https://renzorospigliosi.com">renzorospigliosi.com</a></div>
+      <div class="contact-line"><strong>Instagram</strong><a class="cover-link" href="https://instagram.com/renzorospi">@renzorospi</a></div>
+      <div class="contact-line"><strong>YouTube</strong><a class="cover-link" href="https://www.youtube.com/@RenzoRospigliosi">@RenzoRospigliosi</a></div>
+      <div class="contact-line"><strong>Música</strong><a class="cover-link" href="https://renzorospigliosi.bandcamp.com">renzorospigliosi.bandcamp.com</a></div>
+    </div>
+    <div class="cover-year">2026</div>
+  </div>
+
+  <div class="corner-mark corner-bl page-num">01 / 05</div>
+</div>
+
+
+<!-- ==============================
+     PAGE 2 — SOBRE MÍ + EDUCACIÓN
+============================== -->
+<div class="page" style="padding: var(--margin);">
+
+  <div class="corner-mark corner-tl">SOBRE MÍ</div>
+  <div class="corner-mark corner-tr">RENZO ROSPIGLIOSI BUSTAMANTE</div>
+
+  <div class="two-col" style="margin-top: 8mm;">
+
+    <!-- Left column: Bio + skills -->
+    <div>
+      <h2 class="section-title">Sobre mí</h2>
+      <div class="rule-accent"></div>
+
+      <p style="margin-bottom: 4mm;">
+        Artista interdisciplinar y docente. Licenciado en Teatro por la Pontificia Universidad Católica del Perú
+        y Magíster en Artes Plásticas, Electrónicas y del Tiempo de la Universidad de los Andes (Bogotá).
+      </p>
+      <p style="margin-bottom: 4mm;">
+        Su trabajo explora la intersección entre el arte, la tecnología y la performatividad, construyendo
+        instalaciones, video experimental, animación expandida, piezas performáticas y sonoras mediante
+        lógicas computacionales. Influenciado por su formación escénica, cuestiona los medios tradicionales
+        de entender el cuerpo, las experiencias sensibles y el uso del espacio.
+      </p>
+      <p style="margin-bottom: 4mm;">
+        Recicla y modifica artefactos obsoletos como Gameboys y juguetes electrónicos para convertirlos
+        en sintetizadores y máquinas de ritmo, integrando el rescate de dispositivos y el material de
+        archivo en su proceso creativo.
+      </p>
+      <p style="margin-bottom: 6mm;">
+        Ha presentado sus obras a nivel internacional en espacios como el Centro Nacional de las Artes
+        Delia Zapata, el Teatro Jorge Eliécer Gaitán, el Teatro Mayor Julio Mario Santo Domingo, la Galería
+        Espacio Alterno, el Planetario de Bogotá, el Elfreth's Alley Museum en Philadelphia, el Centro
+        Cultural de la PUCP en Lima y diversos festivales.
+      </p>
+
+      <div class="rule"></div>
+
+      <p style="margin-bottom: 2mm; font-size: 8pt; color: var(--accent); letter-spacing: 0.1em; font-family: 'Bebas Neue', sans-serif; font-size: 11pt;">HERRAMIENTAS &amp; DISCIPLINAS</p>
+
+      <div class="tags-wrap">
+        <span class="tag">TouchDesigner</span>
+        <span class="tag">Live Coding</span>
+        <span class="tag">Video en Vivo</span>
+        <span class="tag">VJing</span>
+        <span class="tag">Instalación Interactiva</span>
+        <span class="tag">Animación Expandida</span>
+        <span class="tag">Video Experimental</span>
+        <span class="tag">Dirección Escénica</span>
+        <span class="tag">Síntesis de Sonido</span>
+        <span class="tag">Circuit Bending</span>
+        <span class="tag">Gameboy / DMG</span>
+        <span class="tag">Danza Intermedial</span>
+        <span class="tag">Videomapping</span>
+        <span class="tag">Performance Situada</span>
+        <span class="tag">Domo Inmersivo</span>
+      </div>
+
+      <div class="rule" style="margin-top: 5mm;"></div>
+
+      <p style="margin-bottom: 2mm; font-family: 'Bebas Neue', sans-serif; font-size: 11pt; color: var(--accent); letter-spacing: 0.1em;">DOCENCIA</p>
+      <p class="small" style="line-height: 1.7;">
+        Universidad de los Andes &nbsp;·&nbsp; Universidad del Rosario &nbsp;·&nbsp; Universidad Jorge Tadeo Lozano
+      </p>
+
+    </div>
+
+    <!-- Right column: Education -->
+    <div>
+      <h2 class="section-title">Formación</h2>
+      <div class="rule-accent"></div>
+
+      <div class="edu-item">
+        <div class="edu-degree">TouchDesigner Operator Foundations</div>
+        <div class="edu-institution">The Interactive &amp; Immersive HQ</div>
+        <div class="edu-year">2025</div>
+      </div>
+
+      <div class="edu-item">
+        <div class="edu-degree">Magíster en Artes Plásticas, Electrónicas y del Tiempo</div>
+        <div class="edu-institution">Universidad de los Andes — Bogotá</div>
+        <div class="edu-year">2021 – 2023</div>
+      </div>
+
+      <div class="edu-item">
+        <div class="edu-degree">Formación en Pedagogía del Centro de Español</div>
+        <div class="edu-institution">Universidad de los Andes</div>
+        <div class="edu-year">2021 – 2023</div>
+      </div>
+
+      <div class="edu-item">
+        <div class="edu-degree">Licenciado en Teatro</div>
+        <div class="edu-institution">Pontificia Universidad Católica del Perú (PUCP)</div>
+        <div class="edu-year">2015 – 2020</div>
+      </div>
+
+      <div class="rule" style="margin-top: 6mm;"></div>
+
+      <h2 class="section-title" style="margin-top: 5mm;">Distinciones</h2>
+      <div class="rule-accent"></div>
+
+      <div class="award-item">
+        <div class="award-icon">★</div>
+        <div class="award-content">
+          <div class="award-title">Ganador — Beca LEP Inmersos en la Escena</div>
+          <div class="award-org">Instituto Distrital de las Artes (IDARTES)</div>
+          <div class="award-year-tag">2024 · Bogotá, Colombia</div>
+        </div>
+      </div>
+
+      <div class="award-item">
+        <div class="award-icon">★</div>
+        <div class="award-content">
+          <div class="award-title">Nominado — Premio Uniandino a las Artes</div>
+          <div class="award-org">Universidad de los Andes</div>
+          <div class="award-year-tag">2024 · Bogotá, Colombia</div>
+        </div>
+      </div>
+
+      <div class="award-item">
+        <div class="award-icon">★</div>
+        <div class="award-content">
+          <div class="award-title">Ganador — OSUN Mobility Grant</div>
+          <div class="award-org">Open Society University Network</div>
+          <div class="award-year-tag">2023 · Internacional</div>
+        </div>
+      </div>
+
+      <div class="rule" style="margin-top: 4mm;"></div>
+
+      <p style="margin-bottom: 2mm; font-family: 'Bebas Neue', sans-serif; font-size: 11pt; color: var(--accent); letter-spacing: 0.1em; margin-top: 4mm;">LABORATORIO</p>
+      <div style="background: rgba(200,184,154,0.07); border: 1px solid var(--accent); padding: 4mm 5mm;">
+        <div style="font-family: 'Bebas Neue', sans-serif; font-size: 13pt; color: var(--accent); letter-spacing: 0.08em; margin-bottom: 2mm;">Lirio Blanco</div>
+        <p class="small" style="line-height: 1.7;">Laboratorio independiente de exploración escénica y digital. Espacio de creación interdisciplinar donde convergen performance, tecnología y experimentación con medios.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="corner-mark corner-bl page-num">02 / 05</div>
+</div>
+
+
+<!-- ==============================
+     PAGE 3 — EXPERIENCIA ARTÍSTICA
+============================== -->
+<div class="page" style="padding: var(--margin);">
+
+  <div class="corner-mark corner-tl">EXPERIENCIA ARTÍSTICA</div>
+  <div class="corner-mark corner-tr">RENZO ROSPIGLIOSI BUSTAMANTE</div>
+
+  <h2 class="section-title" style="margin-top: 8mm;">Experiencia Artística</h2>
+  <div class="rule-accent"></div>
+
+  <div class="experience-col" style="margin-top: 4mm;">
+
+    <div class="exp-year-group">
+      <div class="exp-year">2026</div>
+      <div class="exp-item">
+        <a class="exp-link" href="https://renzorospigliosi.com/proyectos/orbitas.html"><div class="exp-title">Órbitas Sonoras</div></a>
+        <div class="exp-detail">Show audiovisual formato domo</div>
+      </div>
+    </div>
+
+    <div class="exp-year-group">
+      <div class="exp-year">2025</div>
+      <div class="exp-item">
+        <a class="exp-link" href="https://renzorospigliosi.com/proyectos/plasma.html"><div class="exp-title">Resonancia Cromática: Plasma</div></a>
+        <div class="exp-detail">Teatro Jorge Eliécer Gaitán, Bogotá · Centro Cultural Moravia, Medellín</div>
+      </div>
+      <div class="exp-item">
+        <a class="exp-link" href="https://renzorospigliosi.com/proyectos/flores.html"><div class="exp-title">La Inteligencia de las Flores</div></a>
+        <div class="exp-detail">UniandesFest</div>
+      </div>
+      <div class="exp-item">
+        <a class="exp-link" href="https://renzorospigliosi.com/proyectos/residuos.html"><div class="exp-title">Silphium (Residuos)</div></a>
+        <div class="exp-detail">Exposición colectiva "Bien Al Centro" — Sala de Exposiciones, Universidad La Salle</div>
+      </div>
+      <div class="exp-item">
+        <a class="exp-link" href="https://renzorospigliosi.com/proyectos/cuina.html"><div class="exp-title">La Cuina de Rossini</div></a>
+        <div class="exp-detail">Asistencia de dirección escénica — Teatro Mayor Julio Mario Santo Domingo</div>
+      </div>
+      <div class="exp-item">
+        <a class="exp-link" href="https://renzorospigliosi.com/proyectos/nuevasvoces.html"><div class="exp-title">Festival Nuevas Voces</div></a>
+        <div class="exp-detail">Dirección de Arte e instalación interactiva</div>
+      </div>
+      <div class="exp-item">
+        <a class="exp-link" href="https://renzorospigliosi.com/proyectos/silphiumep.html"><div class="exp-title">Silphium (EP)</div></a>
+        <div class="exp-detail">EP grabado en una Gameboy DMG de 1989</div>
+      </div>
+      <div class="exp-item">
+        <a class="exp-link" href="https://renzorospigliosi.com/proyectos/cyclos.html"><div class="exp-title">Resonancia Cromática: Cyclos</div></a>
+        <div class="exp-detail">Domo del Planetario de Bogotá · Festival de la Imagen · <span class="accent-text">Obra Ganadora Beca LEP 2024</span></div>
+      </div>
+    </div>
+
+    <div class="exp-year-group">
+      <div class="exp-year">2024</div>
+      <div class="exp-item">
+        <div class="exp-title">Festival Domo Lleno — DomeMaster</div>
+        <div class="exp-detail">Planetario de Bogotá</div>
+      </div>
+      <div class="exp-item">
+        <a class="exp-link" href="https://renzorospigliosi.com/proyectos/silphium.html"><div class="exp-title">Silphium (Performance)</div></a>
+        <div class="exp-detail">Auditorio del Planetario de Bogotá · Bodega Confama, Medellín</div>
+      </div>
+      <div class="exp-item">
+        <a class="exp-link" href="https://renzorospigliosi.com/proyectos/umbral.html"><div class="exp-title">Umbral de Intimidad</div></a>
+        <div class="exp-detail">Galería Espacio Alterno · <span class="accent-text">Nominado al Premio Uniandino a las Artes 2024</span></div>
+      </div>
+      <div class="exp-item">
+        <a class="exp-link" href="https://renzorospigliosi.com/proyectos/act.html"><div class="exp-title">Viaje a Territorios más que posibles</div></a>
+        <div class="exp-detail">Comisión de Amazon Conservation Team para la Corte Constitucional de Colombia, en colaboración con la Universidad de los Andes</div>
+      </div>
+      <div class="exp-item">
+        <a class="exp-link" href="https://renzorospigliosi.com/proyectos/utopia.html"><div class="exp-title">Utopía</div></a>
+        <div class="exp-detail">Videomapping — Sala Fanny Mikey, Centro Nacional de las Artes Delia Zapata</div>
+      </div>
+      <div class="exp-item">
+        <a class="exp-link" href="https://renzorospigliosi.com/proyectos/traviata.html"><div class="exp-title">La Traviata, de Giuseppe Verdi</div></a>
+        <div class="exp-detail">Video en vivo — Teatro Mayor Julio Mario Santo Domingo</div>
+      </div>
+      <div class="exp-item">
+        <a class="exp-link" href="https://renzorospigliosi.com/proyectos/orestiada.html"><div class="exp-title">Orestiada, de Robert Icke</div></a>
+        <div class="exp-detail">Videoperformance — La Casa del Teatro Nacional</div>
+      </div>
+    </div>
+
+    <div class="exp-year-group">
+      <div class="exp-year">2023</div>
+      <div class="exp-item">
+        <a class="exp-link" href="https://renzorospigliosi.com/proyectos/toros.html"><div class="exp-title">Los Toros se Cortan el Vientre</div></a>
+        <div class="exp-detail">Dirección — Festival Makia, Teatro de Garage</div>
+      </div>
+      <div class="exp-item">
+        <a class="exp-link" href="https://renzorospigliosi.com/proyectos/sueño.html"><div class="exp-title">Sueño con el Cielo y el Mar</div></a>
+        <div class="exp-detail">Solo de Danza Intermedial</div>
+      </div>
+      <div class="exp-item">
+        <a class="exp-link" href="https://renzorospigliosi.com/proyectos/espaciales.html"><div class="exp-title">Diálogos Espaciales</div></a>
+        <div class="exp-detail">Performance situada en la calle</div>
+      </div>
+    </div>
+
+    <div class="exp-year-group">
+      <div class="exp-year">2022</div>
+      <div class="exp-item">
+        <a class="exp-link" href="https://renzorospigliosi.com/proyectos/espejos.html"><div class="exp-title">Espejos</div></a>
+        <div class="exp-detail">Videoinstalación — Planetario de Bogotá, Voltaje: Salón de Arte y Tecnología</div>
+      </div>
+      <div class="exp-item">
+        <a class="exp-link" href="https://renzorospigliosi.com/proyectos/blast.html"><div class="exp-title">Sonidos de Agua y Tierra + BLAST</div></a>
+        <div class="exp-detail">Inauguración Sala Fanny Mikey, Centro Nacional de las Artes. Video en vivo multicanal</div>
+      </div>
+      <div class="exp-item">
+        <a class="exp-link" href="https://renzorospigliosi.com/proyectos/gladys.html"><div class="exp-title">Gladys, Elinor or Nettie</div></a>
+        <div class="exp-detail">Videoinstalación — Elfreth's Alley Museum, Philadelphia</div>
+      </div>
+    </div>
+
+    <div class="exp-year-group">
+      <div class="exp-year">2021</div>
+      <div class="exp-item">
+        <div class="exp-title">Sensáfona</div>
+        <div class="exp-detail">Colectivo multimedia de Live Coding, Danza, Actuación y música en vivo. Presentado en diversos festivales internacionales</div>
+      </div>
+    </div>
+
+    <div class="exp-year-group">
+      <div class="exp-year">2020</div>
+      <div class="exp-item">
+        <a class="exp-link" href="https://renzorospigliosi.com/proyectos/euforia.html"><div class="exp-title">Prisión Euforia</div></a>
+        <div class="exp-detail">Gig-theatre — Centro Cultural PUCP, Lima · Rock And Pez</div>
+      </div>
+    </div>
+
+    <div class="exp-year-group">
+      <div class="exp-year">2019</div>
+      <div class="exp-item">
+        <a class="exp-link" href="https://renzorospigliosi.com/proyectos/medea.html"><div class="exp-title">Medea</div></a>
+        <div class="exp-detail">Dirección y dramaturgia</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="corner-mark corner-bl page-num">03 / 05</div>
+</div>
+
+
+<!-- ==============================
+     PAGE 4 — PROYECTOS (IMÁGENES)
+============================== -->
+<div class="page" style="padding: var(--margin);">
+
+  <div class="corner-mark corner-tl">PROYECTOS SELECCIONADOS</div>
+  <div class="corner-mark corner-tr">RENZO ROSPIGLIOSI BUSTAMANTE</div>
+
+  <h2 class="section-title" style="margin-top: 8mm;">Proyectos Seleccionados</h2>
+  <div class="rule-accent"></div>
+
+  <div class="projects-grid" style="margin-top: 4mm;">
+
+    <a class="project-link" href="https://renzorospigliosi.com/proyectos/orbitas.html">
+    <div class="project-card">
+      <div class="project-img-wrap">
+        <img src="img/orbitas/orbitas3.JPG" alt="Órbitas Sonoras">
+      </div>
+      <div class="project-year">2026</div>
+      <h3 class="project-title">Órbitas Sonoras</h3>
+      <p class="small">Show audiovisual formato domo</p>
+    </div>
+    </a>
+
+    <a class="project-link" href="https://renzorospigliosi.com/proyectos/plasma.html">
+    <div class="project-card">
+      <div class="project-img-wrap">
+        <img src="img/plasma/plasma3.jpg" alt="Resonancia Cromática: Plasma">
+      </div>
+      <div class="project-year">2025</div>
+      <h3 class="project-title">Resonancia Cromática: Plasma</h3>
+      <p class="small">Teatro Jorge Eliécer Gaitán · CC Moravia</p>
+    </div>
+    </a>
+
+    <a class="project-link" href="https://renzorospigliosi.com/proyectos/cyclos.html">
+    <div class="project-card">
+      <div class="project-img-wrap">
+        <img src="img/cyclos/cyclos26.jpg" alt="Resonancia Cromática: Cyclos">
+      </div>
+      <div class="project-year">2025</div>
+      <h3 class="project-title">Resonancia Cromática: Cyclos</h3>
+      <p class="small">Planetario de Bogotá · <span class="accent-text">Beca LEP 2024</span></p>
+    </div>
+    </a>
+
+    <a class="project-link" href="https://renzorospigliosi.com/proyectos/cuina.html">
+    <div class="project-card">
+      <div class="project-img-wrap">
+        <img src="img/cuina/cuina8.jpg" alt="La Cuina de Rossini">
+      </div>
+      <div class="project-year">2025</div>
+      <h3 class="project-title">La Cuina de Rossini</h3>
+      <p class="small">Teatro Mayor Julio Mario Santo Domingo</p>
+    </div>
+    </a>
+
+    <a class="project-link" href="https://renzorospigliosi.com/proyectos/traviata.html">
+    <div class="project-card">
+      <div class="project-img-wrap">
+        <img src="img/traviata/traviata1.jpg" alt="La Traviata">
+      </div>
+      <div class="project-year">2024</div>
+      <h3 class="project-title">La Traviata, Verdi</h3>
+      <p class="small">Video en vivo · Teatro Mayor</p>
+    </div>
+    </a>
+
+    <a class="project-link" href="https://renzorospigliosi.com/proyectos/act.html">
+    <div class="project-card">
+      <div class="project-img-wrap">
+        <img src="img/act/act10.jpg" alt="Viaje a Territorios">
+      </div>
+      <div class="project-year">2024</div>
+      <h3 class="project-title">Viaje a Territorios más que posibles</h3>
+      <p class="small">Amazon Conservation Team · Corte Constitucional</p>
+    </div>
+    </a>
+
+    <a class="project-link" href="https://renzorospigliosi.com/proyectos/toros.html">
+    <div class="project-card">
+      <div class="project-img-wrap">
+        <img src="img/toros/toros5.jpg" alt="Los Toros">
+      </div>
+      <div class="project-year">2023</div>
+      <h3 class="project-title">Los Toros se Cortan el Vientre</h3>
+      <p class="small">Dirección · Festival Makia</p>
+    </div>
+    </a>
+
+    <a class="project-link" href="https://renzorospigliosi.com/proyectos/sueño.html">
+    <div class="project-card">
+      <div class="project-img-wrap">
+        <img src="img/sueño/sueño6.jpg" alt="Sueño con el Cielo y el Mar">
+      </div>
+      <div class="project-year">2023</div>
+      <h3 class="project-title">Sueño con el Cielo y el Mar</h3>
+      <p class="small">Solo de Danza Intermedial</p>
+    </div>
+    </a>
+
+    <a class="project-link" href="https://renzorospigliosi.com/proyectos/medea.html">
+    <div class="project-card">
+      <div class="project-img-wrap">
+        <img src="img/medea/medea4.jpg" alt="Medea">
+      </div>
+      <div class="project-year">2019</div>
+      <h3 class="project-title">Medea</h3>
+      <p class="small">Dirección y dramaturgia</p>
+    </div>
+    </a>
+
+  </div>
+
+  <div class="corner-mark corner-bl page-num">04 / 05</div>
+</div>
+
+
+<!-- ==============================
+     PAGE 5 — MÁS PROYECTOS + CIERRE
+============================== -->
+<div class="page" style="padding: var(--margin);">
+
+  <div class="corner-mark corner-tl">PROYECTOS / CONTACTO</div>
+  <div class="corner-mark corner-tr">RENZO ROSPIGLIOSI BUSTAMANTE</div>
+
+  <div class="two-col" style="margin-top: 8mm;">
+
+    <!-- More project images -->
+    <div>
+      <h2 class="section-title">Más Obra</h2>
+      <div class="rule-accent"></div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5mm; margin-top: 3mm;">
+
+        <a class="project-link" href="https://renzorospigliosi.com/proyectos/euforia.html">
+        <div class="project-card">
+          <div class="project-img-wrap">
+            <img src="img/euforia/euforia1.jpg" alt="Prisión Euforia">
+          </div>
+          <div class="project-year">2020</div>
+          <h3 class="project-title" style="font-size: 10pt;">Prisión Euforia</h3>
+          <p class="small">Gig-theatre · PUCP Lima</p>
+        </div>
+        </a>
+
+        <a class="project-link" href="https://renzorospigliosi.com/proyectos/espejos.html">
+        <div class="project-card">
+          <div class="project-img-wrap">
+            <img src="img/espejos/espejos3.jpg" alt="Espejos">
+          </div>
+          <div class="project-year">2022</div>
+          <h3 class="project-title" style="font-size: 10pt;">Espejos</h3>
+          <p class="small">Videoinstalación · Planetario de Bogotá</p>
+        </div>
+        </a>
+
+        <a class="project-link" href="https://renzorospigliosi.com/proyectos/plasma.html">
+        <div class="project-card">
+          <div class="project-img-wrap">
+            <img src="img/plasma/plasma5.jpg" alt="Plasma">
+          </div>
+          <div class="project-year">2025</div>
+          <h3 class="project-title" style="font-size: 10pt;">Resonancia Cromática: Plasma</h3>
+          <p class="small">Show A/V · Teatro Jorge Eliécer Gaitán</p>
+        </div>
+        </a>
+
+        <a class="project-link" href="https://renzorospigliosi.com/proyectos/orbitas.html">
+        <div class="project-card">
+          <div class="project-img-wrap">
+            <img src="img/orbitas/orbitas8.JPG" alt="Órbitas Sonoras">
+          </div>
+          <div class="project-year">2026</div>
+          <h3 class="project-title" style="font-size: 10pt;">Órbitas Sonoras</h3>
+          <p class="small">Show audiovisual formato domo</p>
+        </div>
+        </a>
+
+        <a class="project-link" href="https://renzorospigliosi.com/proyectos/cyclos.html">
+        <div class="project-card">
+          <div class="project-img-wrap">
+            <img src="img/cyclos/cyclos29.jpg" alt="Cyclos">
+          </div>
+          <div class="project-year">2025</div>
+          <h3 class="project-title" style="font-size: 10pt;">Resonancia Cromática: Cyclos</h3>
+          <p class="small">Domo inmersivo 360° · Planetario</p>
+        </div>
+        </a>
+
+        <a class="project-link" href="https://renzorospigliosi.com/proyectos/toros.html">
+        <div class="project-card">
+          <div class="project-img-wrap">
+            <img src="img/toros/toros3.jpg" alt="Toros">
+          </div>
+          <div class="project-year">2023</div>
+          <h3 class="project-title" style="font-size: 10pt;">Los Toros se Cortan el Vientre</h3>
+          <p class="small">Dirección escénica · Festival Makia</p>
+        </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Right: closing / contact -->
+    <div style="display: flex; flex-direction: column; justify-content: space-between;">
+
+      <div>
+        <h2 class="section-title">Contacto</h2>
+        <div class="rule-accent"></div>
+
+        <div style="display: flex; flex-direction: column; gap: 3mm; margin-top: 3mm;">
+          <div style="border-left: 2px solid var(--accent); padding-left: 4mm;">
+            <p class="small accent-text" style="letter-spacing: 0.08em; margin-bottom: 1mm;">EMAIL</p>
+            <p style="font-size: 9pt;">renzorospigliosib@gmail.com</p>
+          </div>
+          <div style="border-left: 2px solid var(--rule); padding-left: 4mm;">
+            <p class="small accent-text" style="letter-spacing: 0.08em; margin-bottom: 1mm;">WEB</p>
+            <p style="font-size: 9pt;">renzorospigliosi.com</p>
+          </div>
+          <div style="border-left: 2px solid var(--rule); padding-left: 4mm;">
+            <p class="small accent-text" style="letter-spacing: 0.08em; margin-bottom: 1mm;">INSTAGRAM</p>
+            <p style="font-size: 9pt;">@renzorospi</p>
+          </div>
+          <div style="border-left: 2px solid var(--rule); padding-left: 4mm;">
+            <p class="small accent-text" style="letter-spacing: 0.08em; margin-bottom: 1mm;">YOUTUBE</p>
+            <p style="font-size: 9pt;">@RenzoRospigliosi</p>
+          </div>
+          <div style="border-left: 2px solid var(--rule); padding-left: 4mm;">
+            <p class="small accent-text" style="letter-spacing: 0.08em; margin-bottom: 1mm;">MÚSICA / BANDCAMP</p>
+            <p style="font-size: 9pt;">renzorospigliosi.bandcamp.com</p>
+          </div>
+          <div style="border-left: 2px solid var(--rule); padding-left: 4mm;">
+            <p class="small accent-text" style="letter-spacing: 0.08em; margin-bottom: 1mm;">GITHUB</p>
+            <p style="font-size: 9pt;">github.com/renzorospi</p>
+          </div>
+        </div>
+
+        <div class="rule" style="margin-top: 6mm;"></div>
+
+        <p style="font-family: 'Bebas Neue', sans-serif; font-size: 11pt; color: var(--accent); letter-spacing: 0.1em; margin-top: 4mm; margin-bottom: 2mm;">ESPACIOS DE PRESENTACIÓN</p>
+        <p class="small" style="line-height: 1.85;">
+          Centro Nacional de las Artes Delia Zapata · Teatro Jorge Eliécer Gaitán · Teatro Mayor Julio Mario Santo Domingo · Galería Espacio Alterno · Planetario de Bogotá · Elfreth's Alley Museum (Philadelphia) · Centro Cultural PUCP (Lima) · Bodega Confama (Medellín) · La Casa del Teatro Nacional · Festival de la Imagen
+        </p>
+      </div>
+
+      <!-- Footer mark -->
+      <div style="margin-top: 6mm;">
+        <div class="divider-line"></div>
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-top: 3mm;">
+          <div>
+            <p class="small" style="line-height: 1.8;">
+              Polyletis · Lirio Blanco<br>
+              Bogotá, Colombia · 2026
+            </p>
+          </div>
+          <div style="text-align: right;">
+            <div style="font-family: 'Bebas Neue', sans-serif; font-size: 22pt; color: rgba(200,184,154,0.2); line-height: 1;">
+              RENZO<br>ROSPIGLIOSI
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="corner-mark corner-bl page-num">05 / 05</div>
+</div>
+
+</body>
+</html>
